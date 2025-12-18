@@ -1,0 +1,200 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #9013fe);
+}
+
+/* Wrapper */
+.wrapper {
+  position: relative;
+  width: 850px;
+  height: 520px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  transition: 0.6s ease-in-out;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Form containers */
+.form-container,
+.from-container {
+  width: 50%;
+  padding: 50px 40px;
+  transition: 0.6s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  height: 48px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #357ab8;
+}
+
+/* Forgot password */
+.forgot-passsword {
+  font-size: 14px;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #555;
+  transition: 0.2s;
+}
+
+.forgot-passsword:hover {
+  color: #4a90e2;
+}
+
+/* Social Icons */
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #eee;
+  margin: 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  background: #dedede;
+}
+
+/* Toggle Section */
+.toggle-container {
+  width: 50%;
+  background: #4a90e2;
+  color: #fff;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.6s ease-in-out;
+  text-align: center;
+}
+
+.toggle-container h2 {
+  font-size: 28px;
+}
+
+.toggle-container p {
+  margin: 15px 0 25px;
+  font-size: 15px;
+}
+
+.switch-btn {
+  padding: 12px 28px;
+  background: #fff;
+  color: #4a90e2;
+  border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.switch-btn:hover {
+  background: #efefef;
+}
+
+/* Toggle Animation */
+.wrapper.active .login {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper.active .signin {
+  transform: translateX(-100%);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .signin {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+.wrapper.active .toggle-container {
+  background: #9013fe;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .wrapper {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .form-container,
+  .from-container,
+  .toggle-container {
+    width: 100%;
+  }
+
+  .toggle-container {
+    padding: 40px 20px;
+  }
+}
